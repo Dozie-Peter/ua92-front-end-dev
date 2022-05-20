@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- BOOTSTRAP -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--for the basket icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- OWN STUFF -->
+    <title>Fone Oracle</title>
+    <link rel="icon" href="icon.png" type="image/icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row text-left">
+            <div class="col-sm p-2" id="logo">
+                <a href="index.html"><img src="images/mylogo.png" alt="Logo" height="100px" /></a>
+            </div>
+            <div class="col-sm text-center p-2">
+                <a href=""><img class="imgacn1" src="images/person-circle.svg" alt="shopping basket icon" height="30px" />Account</a>
+            </div>
+            <div class="col-sm text-center p-2">
+                <div class="cart-modal-overlay">
+                    <div class="cart-modal">
+                        <i id="close-btn" class="fas fa-times"></i>
+                        <h1 class="cart-is-empty">Cart is empty</h1>
+                        <div class="product-rows">
+                        </div>
+                        <div class="total">
+                            <h1 class="cart-total">TOTAL</h1>
+                            <span class="total-price">$0</span>
+                            <button class="purchase-btn">PURCHASE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-btn">
+                    <i id="cart" class="fas fa-shopping-cart"></i>
+                    <span class="cart-quantity">0</span>
+                </div>
+            </div>
+        </div>
+        <!--for my header from bootrap-->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid" id="navbar1">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							</button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                            <a class="nav-link active" href="index.html">Home</a>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="about_us.html">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="shop.html">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="contact_us.html" tabindex="-1">Contact Us</a>
+                                </li>
+                            </ul>
+                            <button onclick="darkmode()"><img src="images/moon.png" id="icon5"/></button>
+                        </div>
+                    </div>
+                </nav>
+                <br></br>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="apple_iphones.html">Apple Iphones</a></li>
+                    <li><a class="dropdown-item" href="samsung_phones.html">Samsung Phones</a></li>
+                    <li><a class="dropdown-item" href="google_phones_foneoracle.html">Google Phones</a></li>
+                    <li><a class="dropdown-item" href="smart_watches.html">Smart Watches</a></li>
+                </ul>
+            </div>
+            <br></br>
+            <h2 id="now">Contact Us</h2>
+            <br></br>
+            <div class="row">
+                <div class="col-sm">
+                    <form id="form">
+                        <div class="input-group">
+                            <!--This is name field-->
+                            <label>Name</label>
+                            <!--The name is given a function called validteName and an Id, contact-name-->
+                            <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                            <!--This is for innerHTML error message that will display if there is an error-->
+                            <span id="name-error"></spam>
+						</div>
+					
+						<div class="input-group">
+                            <!--This is phone no field-->
+							<label>Phone No.</label>
+                             <!--The name is given a function called validtePhone and an Id, contact-phone-->
+							<input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                            <!--This is for innerHTML error message that will display if there is an error-->
+							<span id="phone-error"></spam>
+						</div>
+					
+						<div class="input-group">
+                            <!--This is email no field-->
+							<label>Email Id</label>
+                             <!--The name is given a function called validteEmail and an Id, contact-email-->
+							<input type="email" placeholder="Enter your email" id="contact-email" onkeyup="validateEmail()">
+                            <!--This is for innerHTML error message that will display if there is an error-->
+							<span id="email-error"></spam>
+						</div>   
+					
+						<div class="input-group">
+                            <!--This is email no field-->
+							<label>Your Message</label>
+                            <!--The name is given a function called validteMessage and an Id, contact-message-->
+							<textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                            <!--This is for innerHTML error message that will display if there is an error-->
+							<span id="message-error"></spam>
+						</div>
+						<div class="popup">
+                            <!--This is for the submit button-->
+                        	<button id="contact-submit" onclick="myFunction()">Submit</button>
+                        	<span class="popuptext" id="myPopup">Thanks for contacting</span>
+                        </div>
+                    </form>
+                    <br></br><br></br>
+                </div>
+                <div class="col-sm" <p><i class="fas fa-home me-3"></i>9 Ukraine, Salford, M7 3TE UK</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> FoneOracle@yahoo.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> +44(0)7 1234 567 88</p>
+
+                </div>
+                <br></br><br></br>
+                <!--for the footer-->
+                <div>
+                    <footer>
+                        <div class="container text-center text-md-start mt-5" id="footerbox">
+                            <!-- Grid row -->
+                            <div class="row mt-3">
+                                <!-- Grid column -->
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                    <!-- Content -->
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        <i></i>Terms and Policy
+                                    </h6>
+                                    <a href=""><img src="images/shield-exclamation.svg" alt="Privacy icon" height="40px" /></a>
+                                    <a href="" style="color:black">
+                                        <p>Privacy</p>
+                                    </a>
+                                    <a href=""><img src="images/terms.png" alt="Terms and Conditions" height="40px" /></a>
+                                    <a href="" style="color:black">
+                                        <p>Terms and Conditions</p>
+                                    </a>
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    <!-- Links -->
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        Products
+                                    </h6>
+                                    <p>
+                                        <a href="apple_iphones.html" class="text-reset">Apple Iphones</a>
+                                    </p>
+                                    <p>
+                                        <a href="samsung_phones.html" class="text-reset">Samsung Phones</a>
+                                    </p>
+                                    <p>
+                                        <a href="google_phones_foneoracle.html" class="text-reset">Google Phones</a>
+                                    </p>
+                                    <p>
+                                        <a href="smart_watches.html" class="text-reset">Smart Watches</a>
+                                    </p>
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    <!-- Links -->
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        Useful links
+                                    </h6>
+                                    <a class="nav-link text-black" href="index.html">Home Page</a>
+                                    <a class="nav-link text-black" href="shop.html">Shop</a>
+                                    <a class="nav-link text-black" href="about_us.html">About US</a>
+                                    <a class="nav-link text-black" href="contact_us.html">Contact US</a>
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                    <!-- Links -->
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        Contact
+                                    </h6>
+                                    <p><i class="fas fa-home me-3"></i>9 Ukraine, Salford, M7 3TE UK</p>
+                                    <p>
+                                        <i class="fas fa-envelope me-3"></i> FoneOracle@yahoo.com
+                                    </p>
+                                    <p><i class="fas fa-phone me-3"></i> +44(0)7 1234 567 88</p>
+                                </div>
+                                <!-- Grid column -->
+                            </div>
+                            <!-- Grid row -->
+                        </div>
+                        </section>
+                        <!-- Section: Links  -->
+
+                        <!-- Copyright -->
+                        <div class="text-center p-4" style="background-color:#04AA6D;">
+                            © 2022 Copyright:
+                            <a class="text-reset fw-bold" href="index.html">FoneOracle.com</a>
+                        </div>
+                        <!-- Copyright -->
+                    </footer>
+                    <!-- Footer -->
+                </div>
+            </div>
+            <!-- BOOTSTRAP -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+            <script src="./js/myjavascript.js"></script>
+            <script>
+                function darkmode() {
+                    document.body.classList.toggle("dark-theme");
+                }
+            </script>
+            <script>
+                // When the user clicks on <div>, open the popup
+                function myFunction() {
+                    var popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+                }
+            </script>
+</body>
+
+</html>

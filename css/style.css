@@ -1,0 +1,517 @@
+/*This is for the back ground colour of the body for the webpages*/
+
+body {
+    background-color: #FFFDD0;
+}
+
+.bodyown {
+    background-color: #FFFDD0;
+}
+
+
+/*This is for the back ground colour of the container*/
+
+.container {
+    background-color: var(--primary-color);
+}
+
+#logo {
+    text-align: center;
+}
+/*This is to make the text the navbar align with each other*/
+.navbarTogglerDemo01 {
+    text-align: center;
+}
+/*This is for the colour of the navbar. The div of the navbar was given a class called navbar1 in HTML*/
+#navbar1 {
+    background-color: #52d3a4;
+}
+
+
+/*This is for the dark mode*/
+/*The mood image was given an icon5 as Id in the HTML*/
+/*The cursor is made to have a button property by making it a pointer*/
+
+#icon5 {
+    width: 30px;
+    cursor: pointer;
+}
+/*Primary color is the default color of the pages and it is white*/
+/*Secondary color is the dark mode colour and it is white*/
+:root {
+    --primary-color: white;
+    --secondary-color: #212121;
+}
+
+/*By flipping the primary and secondary color, on the click on the moon, all white colours becomes black and vice versa*/
+.dark-theme {
+    --primary-color: #212121;
+    --secondary-color: #fff;
+    color: white;
+}
+
+
+/*This is for the rows in the container*/
+
+.col-sm {
+    margin-left: 55px;
+}
+
+.img1 {
+    height: 30px;
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+
+
+/*This is for the hover effect on the product images*/
+
+.product-image {
+    display: block;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.product-image:hover {
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+
+/* This is for the contact us page */
+
+#form {
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 30px 20px;
+    background: var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-left: 10%;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.input-group label {
+    flex-basis: 28%;
+}
+
+.input-group input,
+.input-group textarea {
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+form button {
+    background: #04AA6D;
+    color: var(--primary-color);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+
+.input-group span {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 15px;
+    color: red;
+}
+
+#submit-error {
+    color: red;
+}
+
+#now {
+    margin-left: 10%;
+    text-align: left 10%;
+}
+
+.fix {
+    margin-left: 10%;
+    text-align: left 10%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/*This is for the cart button, making it to display at the top right-hand side of the page*/
+
+.cart-btn {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#cart {
+    position: relative;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 1em 4em 0 0;
+}
+
+
+/*This is for the cart page that displays when the cart icon is clicked*/
+
+.cart-quantity {
+    color: var(--primary-color);
+    background-color: red;
+    padding: .2em .3em;
+    position: absolute;
+    margin: .8em 7.5em 0 0;
+    right: 0;
+    border: solid 2px red;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-top: 1em
+}
+
+.product-image {
+    margin-bottom: 1em
+}
+
+
+/*This is for the add to cart button*/
+
+.add-to-cart {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: center;
+    right: 0;
+    padding: .5em 1em;
+    outline: none;
+    border: 2px solid #04AA6D;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.2rem
+}
+/*The Add to cart button is white but on hover it turns green*/
+.add-to-cart:hover {
+    background-color: #04AA6D;
+    color: var(--primary-color);
+}
+
+
+/*This is for the product price*/
+
+.product-price {
+    padding-top: 1em;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+/*this is for the cart modal that displays when you click on the cart*/
+
+.cart-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+    transform: translateX(-200%);
+    transition: .5s ease-out;
+}
+
+.cart-modal {
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(50, 50, 50);
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/*close button for the cart page*/
+
+#close-btn {
+    font-size: 1.5rem;
+    float: right;
+    margin: .5em 2em 0 0;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.cart-is-empty {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    display: none;
+}
+
+.total {
+    text-align: center;
+    margin: 2em 0 2em 0;
+}
+
+.cart-total {
+    color: var(--primary-color);
+}
+
+.total-price {
+    color: var(--primary-color);
+    font-size: 2rem;
+    display: block;
+}
+
+
+/*This is for the purchase button on the cart page*/
+
+.purchase-btn {
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: green;
+    color: var(--primary-color);
+    padding: 1em 2em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 2em 0 1em 0;
+}
+
+
+/*This is for the display of the product on the cart page*/
+
+.product-rows {
+    margin-top: 3em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+}
+
+.cart-image {
+    width: 10rem;
+    margin: 1em;
+}
+
+
+/*This is for the price on the cart page*/
+
+.cart-price {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+
+/*This is for the quantity on the cart page*/
+
+.product-quantity {
+    width: 4rem;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+
+/*This is for the remove button on the cart page*/
+
+.remove-btn {
+    padding: 1em 2em;
+    background-color: red;
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 3rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.remove-btn:active {
+    transform: translateY(5px);
+}
+
+@media (max-width: 1000px) {
+    .cart-modal {
+        width: 100vw;
+    }
+    .product-row {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .remove-btn {
+        margin: 0
+    }
+    .product-quantity {
+        margin: .5em 0 .5em 0
+    }
+}
+
+
+/*This is for the footer*/
+
+#footerbox {
+    background-color: #52d3a4;
+}
+
+.imgacn1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/*for the search bar*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the search field */
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 50%;
+    background: #f1f1f1;
+}
+
+
+/* Style the submit button */
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+
+/* Clear floats */
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Popup container */
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/* The actual popup (appears on top) */
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
